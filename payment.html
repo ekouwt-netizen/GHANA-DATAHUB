@@ -23,6 +23,15 @@
             <form action="pending.html" method="GET">
 
                 <div class="form-group">
+  <div class="form-group">
+                    <label for="network">Beneficiary Network</label>
+                    <select id="network" required>
+                        <option value="">Select Network</option>
+                        <option value="mtn">MTN Ghana</option>
+                        <option value="telecel">Telecel Ghana</option>
+                        <option value="airteltigo">AirtelTigo</option>
+                    </select>
+                </div>
 
 <label for="network">Data Type (MB/GB/TB)</label>
                     <select id="network" required>
@@ -49,16 +58,7 @@
                     <input type="tel" id="beneficiary" placeholder="Reciever Number+233..." required>
                 </div>
 
-                <div class="form-group">
-                    <label for="network">Beneficiary Network</label>
-                    <select id="network" required>
-                        <option value="">Select Network</option>
-                        <option value="mtn">MTN Ghana</option>
-                        <option value="telecel">Telecel Ghana</option>
-                        <option value="airteltigo">AirtelTigo</option>
-                    </select>
-                </div>
-
+              
                 <div class="form-group">
                     <label for="payment-method">Payment Method</label>
                     <select id="payment-method" required>
