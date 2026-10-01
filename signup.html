@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Ghana Datahub</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+  <div class="auth-container">
+    <div class="auth-header">
+      <h2>Create an Account</h2>
+      <p>Join Ghana Datahub for instant data top-ups</p>
+    </div>
+
+    <div id="signup-alert" class="alert-message"></div>
+
+    <form id="signup-form">
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="e.g. Kwame Mensah" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Ghana Phone / MoMo Number</label>
+        <input type="tel" id="phone" placeholder="e.g. 024XXXXXXX" maxlength="10" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="name@example.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Minimum 6 characters" required>
+      </div>
+
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" placeholder="Re-enter password" required>
+      </div>
+
+      <button type="submit" class="btn-submit">Sign Up</button>
+    </form>
+
+    <div class="auth-footer">
+      <p>Already have an account? <a href="index.html">Log In</a></p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('signup-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const phone = document.getElementById('phone').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirm-password').value;
+      const alertBox = document.getElementById('signup-alert');
+
+      // Ghanaian phone number validation regex
+      const ghanaPhoneRegex = /^(02[034678]|05[03456789])\d{7}$/;
+
+      alertBox.style.display = 'none';
+
+      if (!ghanaPhoneRegex.test(phone)) {
+        alertBox.className = 'alert-message alert-error';
+        alertBox.innerText = 'Please enter a valid Ghanaian phone number (e.g. 0241234567).';
+        alertBox.style.display = 'block';
+        return;
+      }
+
+      if (password.length < 6) {
+        alertBox.className = 'alert-message alert-error';
+        alertBox.innerText = 'Password must be at least 6 characters long.';
+        alertBox.style.display = 'block';
+        return;
+      }
+
+      if (password !== confirmPassword) {
+        alertBox.className = 'alert-message alert-error';
+        alertBox.innerText = 'Passwords do not match.';
+        alertBox.style.display = 'block';
+        return;
+      }
+
+      // Successful validation redirect
+      alertBox.className = 'alert-message alert-success';
+      alertBox.innerText = 'Account created successfully! Redirecting...';
+      alertBox.style.display = 'block';
+
+      setTimeout(() => {
+        window.location.href = 'home.html';
+      }, 1500);
+    });
+  </script>
+
+</body>
+</html>

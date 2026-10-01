@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Ghana DataHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Ghana DataHub</div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="index.html">Logout</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="form-card">
+            <h2>Payment Details</h2>
+            <!-- Form Action redirects to success.html on submit -->
+            <form action="pending.html" method="GET">
+
+                <div class="form-group">
+
+<Label>Enter Amount</Label><P></P>
+<input type="number" placeholder="GHC 1" required><P></P>
+
+
+                    <label for="beneficiary">Beneficiary Mobile Number</label>
+                    <input type="tel" id="beneficiary" placeholder="024/055/020/027..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="network">Beneficiary Network</label>
+                    <select id="network" required>
+                        <option value="">Select Network</option>
+                        <option value="mtn">MTN Ghana</option>
+                        <option value="telecel">Telecel Ghana</option>
+                        <option value="airteltigo">AirtelTigo</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="payment-method">Payment Method</label>
+                    <select id="payment-method" required>
+                        <option value="">Select Payment Wallet</option>
+                        <option value="momo">MTN Mobile Money</option>
+                        <option value="telecel-cash">Telecel Cash</option>
+                        <option value="at-money">AT Money</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="payer-number">Wallet Mobile Number (For Payment Prompt)</label>
+                    <input type="tel" id="payer-number" placeholder="Enter paying MoMo number" required>
+                </div>
+
+                <button type="submit" class="btn">Complete Payment</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Ghana DataHub. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

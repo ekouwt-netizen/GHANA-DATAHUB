@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Ghana Datahub</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --primary-color: #004d99;
+      --accent-color: #ffcc00;
+      --bg-color: #f4f7f9;
+      --card-bg: #ffffff;
+      --text-color: #333333;
+      --border-color: #e0e0e0;
+      --success-color: #28a745;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Container Styling */
+    .container {
+      max-width: 1000px;
+      width: 90%;
+      margin: 40px auto;
+    }
+
+    .page-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .page-title h1 {
+      color: var(--primary-color);
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+    }
+
+    .page-title p {
+      color: #666666;
+      font-size: 1rem;
+    }
+
+    /* Layout Grid */
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Contact Info Cards */
+    .info-card {
+      background: var(--card-bg);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+      margin-bottom: 20px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .info-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .icon-box {
+      background-color: #eef5fc;
+      color: var(--primary-color);
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+
+    .info-content h3 {
+      font-size: 1rem;
+      color: var(--primary-color);
+      margin-bottom: 4px;
+    }
+
+    .info-content p, .info-content a {
+      font-size: 0.95rem;
+      color: #555555;
+      text-decoration: none;
+    }
+
+    .info-content a:hover {
+      color: var(--primary-color);
+      text-decoration: underline;
+    }
+
+    /* Contact Form Box */
+    .form-card {
+      background: var(--card-bg);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    }
+
+    .form-card h2 {
+      color: var(--primary-color);
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+
+    .form-group input, 
+    .form-group textarea, 
+    .form-group select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-family: inherit;
+    }
+
+    .form-group input:focus, 
+    .form-group textarea:focus, 
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 5px rgba(0, 77, 153, 0.2);
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 12px;
+      background-color: var(--primary-color);
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn-submit:hover {
+      background-color: #003366;
+    }
+
+    .alert {
+      display: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .alert-success {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="page-title">
+      <h1>Contact Us</h1>
+      <p>Have questions about your data order? We're here to help you 24/7.</p>
+    </div>
+
+    <div class="contact-wrapper">
+      
+      <!-- Left Column: Quick Contact Details -->
+      <div class="info-section">
+        <div class="info-card">
+          
+          <div class="info-item">
+            <div class="icon-box">💬</div>
+            <div class="info-content">
+              <h3>WhatsApp Support</h3>
+              <p><a href="https://wa.me/233000000000" target="_blank">+233 (0) 59 732 8895</a></p>
+              <p style="font-size: 0.8rem; color: #888;">Instant response</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="icon-box">✉️</div>
+            <div class="info-content">
+              <h3>Email Address</h3>
+              <p><a href="mailto:support@ghanadatahub.com">support@ghanadatahub.com</a></p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="icon-box">📍</div>
+            <div class="info-content">
+              <h3>Location</h3>
+              <p>Accra, Ghana</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="icon-box">⏰</div>
+            <div class="info-content">
+              <h3>Working Hours</h3>
+              <p>Monday - Sunday: 24/7 Automated Services</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Column: Contact Form -->
+      <div class="form-card">
+        <h2>Send Us a Message</h2>
+
+        <div id="status-alert" class="alert alert-success">
+          Thank you! Your message has been sent. Our team will get back to you shortly.
+        </div>
+
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" placeholder="Enter your full name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone / WhatsApp Number</label>
+            <input type="tel" id="phone" placeholder="e.g. 024XXXXXXX" maxlength="10" required>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject / Issue Type</label>
+            <select id="subject" required>
+              <option value="">Select a topic</option>
+              <option value="pending-data">Delayed / Pending Data Top-up</option>
+              <option value="payment-issue">Payment / MoMo Issue</option>
+              <option value="general">General Inquiry</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Describe your issue or inquiry in detail..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      var alertBox = document.getElementById('status-alert');
+      
+      // Display success message
+      alertBox.style.display = 'block';
+
+      // Reset form input fields
+      this.reset();
+
+      // Automatically hide success alert after 5 seconds
+      setTimeout(function() {
+        alertBox.style.display = 'none';
+      }, 5000);
+    });
+  </script>
+
+</body>
+</html>
